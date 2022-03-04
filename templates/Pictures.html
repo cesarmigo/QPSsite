@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<body>
+
+<h1>{{book.title}}</h1>
+<p>Published on {{book.date}}</p>
+<div class='form-group'>
+  <form method='POST' enctype='multipart/form-data'>
+    {% csrf_token %}
+    {{form.media}}
+    {{form.as_p}}
+
+<img src="{{book.images.url}}">
+
+<br></br>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>QPSLLC</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+        <link rel="stylesheet" href="{% static 'css/grid.css' %}">
+    </head>
+    <body>
+        <section class="gallery-block grid-gallery">
+            <div class="container">
+                <div class="heading">
+                    <h2>QPS LLC</h2>
+                    <p> Before And After Gallery </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'image/beforebathpaint1.jpg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'image/beforebathpaint1.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'image/afterbathpaint1.jpg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'image/afterbathpaint1.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'image/beforebrazilpaint.jpg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'image/beforebrazilpaint.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'image/afterbrazilpaint.jpg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'image/afterbrazilpaint.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'image/beforehallwaypaint1.jpg'%}" >
+                            <img class="img-fluid image scale-on-hover" src="{% static 'image/beforehallwaypaint1.jpg'%}" >
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'image/afterhallwaypainttt.jpg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'image/afterhallwaypainttt.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'image/cabbeforereal.jpg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'image/cabbeforereal.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'image/cabafter.jpg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'image/cabafter.jpg'%}">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="../img/image9.jpg">
+                            <img class="img-fluid image scale-on-hover" src="../img/image9.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+        <script>
+            baguetteBox.run('.grid-gallery', { animation: 'slideIn'});
+        </script>
+    </body>
+</html>

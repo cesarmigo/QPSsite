@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>QPSLLC</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-3px;margin-top:11px;opacity:1;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>QPS LLC</b></h3>
+  </div>
+  {% load static %}
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+    <a href="{% url 'gallery' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Gallery</a>
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a>
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Us</a>
+    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Locations</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
+  <span>QPS LLC </span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+
+    <center> <h1 class="w3-jumbo"><b>QPS LLC</b></h1></center>
+    <center> <h1> <b>Home Improvement</b> </h1></center>
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Showcase.</b></h1>
+    <hr style="width:50px;border:5px solid blue" class="w3-round">
+  </div>
+
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+
+
+      {% load static %}
+      <img src="{% static 'image/beforekitchen1.3.jpg' %}" style="width:100%" onclick="onClick(this)" alt="Before">
+      <img src="{% static 'image/beforedopebathroom1.10.jpg' %}" style="width:100%" onclick="onClick(this)" alt="Before">
+      <img src="{% static 'image/bathroomremodelbefore1.jpg' %}" style="width:100%" onclick="onClick(this)" alt="Before">
+
+    </div>
+
+
+
+    <div class="w3-half">
+
+      <img src="{% static 'image/afterkitchenremodel1.33.jpg' %}" style="width:100%" onclick="onClick(this)" alt="After">
+      <img src="{% static 'image/afterdopebathroom1.10.jpg' %}" style="width:100%" onclick="onClick(this)" alt="After">
+      <img src="{% static 'image/bathroomremodel.jpg' %}" style="width:100%" onclick="onClick(this)" alt="After">
+    </div>
+  </div>
+
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Services.</b></h1>
+    <hr style="width:50px;border:5px solid blue" class="w3-round">
+
+      <div class="w3-row-padding">
+        <div class="w3-half w3-margin-bottom">
+          <ul class="w3-ul w3-light-grey w3-center">
+            <li class="w3-blue w3-xlarge w3-padding-32">QPS Services</li>
+            <li class="w3-padding-16"><b>Painting</b></li>
+            <li class="w3-padding-16"><b>Interior Remodeling</b></li>
+            <li class="w3-padding-16"><b>Flooring</b></li>
+            <li class="w3-padding-16"><b>Carpentry</b></li>
+            <li class="w3-padding-16"><b>Outdoor Work<b/></li>
+            <li class="w3-padding-16">
+              <h2>QPS LLC</h2>
+              <span class="w3-opacity">Providing Professional Services</span>
+            </li>
+          </ul>
+        </div>
+    <p><b>We are a family owned buisness that focuses on what's best for your home and what's best for you!</b></p>
+  </div>
+
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>About Us.</b></h1>
+    <hr style="width:50px;border:5px solid blue" class="w3-round">
+    <p>Customer Satisfaction Is Our Number 1 Goal.</p>
+    <p>We provide the professional services you need!
+    </p>
+    <p><b>Our Amazing Team</b>:</p>
+  </div>
+
+  <!-- The Team -->
+
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="{% static 'image/pop.jpg' %}" alt="QPS" style="width:100%">
+        <div class="w3-container">
+          <h3>Cesar Quinonez</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+          <p>QPS LLC</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="{% static 'image/profile2.jpg' %}" alt="QPS" style="width:100%">
+        <div class="w3-container">
+          <h3>Cesar Quinonez Jr.</h3>
+          <p class="w3-opacity">Team Coordinator</p>
+          <p>QPS LLC</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="{% static 'image/.png' %}" alt="QPS" style="width:100%">
+        <div class="w3-container">
+          <h3>Gracie Quinonez</h3>
+          <p class="w3-opacity">Customer Service</p>
+          <p>QPS LLC</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Packages / Pricing Tables // code for button: <li class="w3-light-grey w3-padding-24">
+    <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+  </li>-->
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Work Locations.</b></h1>
+    <hr style="width:50px;border:5px solid blue" class="w3-round">
+    <p>We work in the DMV area and are open to traveling distance if the job requieres it!</p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-blue w3-xlarge w3-padding-32">Providing Services In The DMV</li>
+        <li class="w3-padding-16">Great Falls, VA</li>
+        <li class="w3-padding-16">Mclean, VA</li>
+        <li class="w3-padding-16">Chantilly, VA</li>
+        <li class="w3-padding-16">Lowes Island, VA</li>
+        <li class="w3-padding-16">Reston, VA</li>
+        <li class="w3-padding-16">
+          <h2>Locations Vary.</h2>
+          <span class="w3-opacity">We'll try Our Best!</span>
+        </li>
+      </ul>
+    </div>
+
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Contact Us.</b></h1>
+    <hr style="width:50px;border:5px solid blue" class="w3-round">
+    <p>Thinking About Remodeling? Send Us Your Email For Free Estimates! </p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Questions?</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-blue w3-margin-bottom">Send Message</button>
+    </form>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.linkedin.com/in/cesar-rene-quinonez/" title="CQ" target="_blank" class="w3-hover-opacity">Migo's Research</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
